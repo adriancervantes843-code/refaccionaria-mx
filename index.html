@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoParts MX – Refacciones de Alta Calidad</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. HEADER & BUSCADOR INTELIGENTE                               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <header id="main-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="AutoParts MX inicio">
+        <span class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <circle cx="18" cy="18" r="16" stroke="#FF4D00" stroke-width="2.5"/>
+            <path d="M10 22 L18 10 L26 22" stroke="#FF4D00" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="18" cy="22" r="3" fill="#FF4D00"/>
+          </svg>
+        </span>
+        <span class="logo-text">Auto<strong>Parts</strong><em>MX</em></span>
+      </a>
+
+      <!-- Buscador -->
+      <div class="search-wrap">
+        <form class="search-form" role="search" autocomplete="off">
+          <label for="main-search" class="sr-only">Buscar refacciones</label>
+          <input
+            type="search"
+            id="main-search"
+            class="search-input"
+            placeholder="Busca por parte, número OEM o vehículo…"
+            aria-autocomplete="list"
+            aria-controls="search-suggestions"
+          />
+          <button type="submit" class="search-btn" aria-label="Buscar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </form>
+        <ul id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Sugerencias de búsqueda" hidden></ul>
+      </div>
+
+      <!-- Botón vehículo -->
+      <button class="vehicle-btn" id="open-vehicle-modal" aria-haspopup="dialog" aria-expanded="false">
+        <span class="vehicle-btn__icons" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l2-3h4l2 3h3a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z"/><circle cx="8.5" cy="13.5" r="1.5"/><circle cx="15.5" cy="13.5" r="1.5"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        <span>Selecciona tu Vehículo</span>
+      </button>
+
+    </div>
+
+    <!-- Nav secundario -->
+    <nav class="header-nav" aria-label="Categorías principales">
+      <ul>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#hot-sale">Hot Sale</a></li>
+        <li><a href="#selector">Mi Garaje</a></li>
+        <li><a href="#">Marcas</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. HERO SECTION + POP-UP DE DESCUENTO                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Banner principal">
+
+    <!-- Fondo visual hero -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg__gradient"></div>
+      <div class="hero-bg__grid"></div>
+      <!-- Partículas decorativas -->
+      <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+      <!-- Motor SVG decorativo -->
+      <div class="hero-engine-art" aria-hidden="true">
+        <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.18" stroke="#FF4D00" stroke-width="1.5">
+            <rect x="150" y="100" width="300" height="200" rx="12"/>
+            <rect x="170" y="120" width="260" height="160" rx="8"/>
+            <rect x="200" y="60" width="40" height="60" rx="4"/>
+            <rect x="260" y="60" width="40" height="60" rx="4"/>
+            <rect x="320" y="60" width="40" height="60" rx="4"/>
+            <circle cx="225" cy="200" r="40"/>
+            <circle cx="375" cy="200" r="40"/>
+            <circle cx="225" cy="200" r="20"/>
+            <circle cx="375" cy="200" r="20"/>
+            <line x1="50" y1="180" x2="150" y2="180"/>
+            <line x1="450" y1="180" x2="550" y2="180"/>
+            <rect x="50" y="160" width="60" height="40" rx="4"/>
+            <rect x="490" y="160" width="60" height="40" rx="4"/>
+          </g>
+          <!-- Líneas neón -->
+          <g opacity="0.6" stroke="#FF4D00" stroke-width="2" filter="url(#glow)">
+            <line x1="225" y1="200" x2="375" y2="200"/>
+            <circle cx="300" cy="200" r="8" fill="#FF4D00" opacity="0.8"/>
+          </g>
+          <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Contenido hero -->
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up" style="--delay: 0.1s">+ de 500,000 refacciones en stock</p>
+      <h1 class="hero-title reveal-up" style="--delay: 0.25s">
+        Refacciones <span class="hero-title__accent">exactas</span><br/>para tu auto
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay: 0.4s">
+        Compatibilidad garantizada. Envío mismo día. Soporte de expertos 24/7.
+      </p>
+      <div class="hero-actions reveal-up" style="--delay: 0.55s">
+        <a href="#categorias" class="btn btn--primary">Ver Catálogo</a>
+        <a href="#selector" class="btn btn--ghost">Mi Vehículo</a>
+      </div>
+      <div class="hero-stats reveal-up" style="--delay: 0.7s">
+        <div class="hero-stat"><strong>98%</strong><span>Compatibilidad exacta</span></div>
+        <div class="hero-stat"><strong>500k+</strong><span>Productos disponibles</span></div>
+        <div class="hero-stat"><strong>4.9★</strong><span>Calificación clientes</span></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Pop-up lateral de descuento -->
+  <aside
+    class="promo-popup"
+    id="promo-popup"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Oferta especial de bienvenida"
+    aria-hidden="true"
+  >
+    <button class="promo-popup__close" id="close-promo" aria-label="Cerrar oferta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="promo-popup__badge">10% OFF</div>
+    <h3 class="promo-popup__title">¡Primera compra con descuento!</h3>
+    <p class="promo-popup__text">Registra tu correo y obtén 10% de descuento en tu primera orden. Sin complicaciones.</p>
+    <form class="promo-popup__form" id="promo-form">
+      <input type="email" placeholder="tucorreo@ejemplo.com" required aria-label="Correo electrónico" />
+      <button type="submit" class="btn btn--primary btn--full">Obtener Cupón</button>
+    </form>
+    <p class="promo-popup__legal">Sin spam. Puedes cancelar cuando quieras.</p>
+  </aside>
+  <div class="overlay-dim" id="promo-overlay" aria-hidden="true"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. SELECTOR DE VEHÍCULO AVANZADO                               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section class="vehicle-section" id="selector" aria-labelledby="selector-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Paso 1 de 2</p>
+        <h2 class="section-title" id="selector-title">¿Qué tipo de vehículo tienes?</h2>
+        <p class="section-sub">Selecciona para ver refacciones 100% compatibles</p>
+      </div>
+
+      <div class="vehicle-grid" role="list">
+
+        <button class="vehicle-card" data-type="Sedán" role="listitem" aria-label="Seleccionar Sedán">
+          <div class="vehicle-card__img-wrap" aria-hidden="true">
+            <svg class="vehicle-icon" viewBox="0 0 120 60" fill="none">
+              <path d="M10 40 Q10 20 30 20 L50 15 Q65 8 80 15 L105 20 Q115 20 115 35 L115 45 Q115 48 112 48 L20 48 Q10 48 10 40Z" fill="#FF4D00" opacity="0.15" stroke="#FF4D00" stroke-width="1.5"/>
+              <circle cx="30" cy="48" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="90" cy="48" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="30" cy="48" r="3" fill="#FF4D00"/>
+              <circle cx="90" cy="48" r="3" fill="#FF4D00"/>
+              <line x1="45" y1="15" x2="42" y2="35" stroke="#FF4D00" stroke-width="1" opacity="0.5"/>
+              <line x1="75" y1="12" x2="78" y2="35" stroke="#FF4D00" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <span class="vehicle-card__label">Sedán</span>
+          <span class="vehicle-card__arrow" aria-hidden="true">→</span>
+        </button>
+
+        <button class="vehicle-card" data-type="SUV" role="listitem" aria-label="Seleccionar SUV">
+          <div class="vehicle-card__img-wrap" aria-hidden="true">
+            <svg class="vehicle-icon" viewBox="0 0 120 60" fill="none">
+              <path d="M8 42 L8 22 Q8 15 18 15 L40 12 Q60 5 85 12 L108 18 Q118 18 118 30 L118 45 Q118 50 112 50 L15 50 Q8 50 8 42Z" fill="#FF4D00" opacity="0.15" stroke="#FF4D00" stroke-width="1.5"/>
+              <circle cx="30" cy="50" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="93" cy="50" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="30" cy="50" r="3" fill="#FF4D00"/>
+              <circle cx="93" cy="50" r="3" fill="#FF4D00"/>
+              <rect x="40" y="12" width="45" height="20" rx="3" fill="#FF4D00" opacity="0.08" stroke="#FF4D00" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="vehicle-card__label">SUV</span>
+          <span class="vehicle-card__arrow" aria-hidden="true">→</span>
+        </button>
+
+        <button class="vehicle-card" data-type="Camioneta" role="listitem" aria-label="Seleccionar Camioneta">
+          <div class="vehicle-card__img-wrap" aria-hidden="true">
+            <svg class="vehicle-icon" viewBox="0 0 120 60" fill="none">
+              <rect x="8" y="18" width="50" height="30" rx="4" fill="#FF4D00" opacity="0.1" stroke="#FF4D00" stroke-width="1.5"/>
+              <path d="M58 28 L105 28 L112 42 L58 42Z" fill="#FF4D00" opacity="0.1" stroke="#FF4D00" stroke-width="1.5"/>
+              <line x1="58" y1="28" x2="58" y2="42" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="28" cy="50" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="93" cy="50" r="7" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="28" cy="50" r="3" fill="#FF4D00"/>
+              <circle cx="93" cy="50" r="3" fill="#FF4D00"/>
+            </svg>
+          </div>
+          <span class="vehicle-card__label">Camioneta</span>
+          <span class="vehicle-card__arrow" aria-hidden="true">→</span>
+        </button>
+
+        <button class="vehicle-card" data-type="Moto" role="listitem" aria-label="Seleccionar Moto">
+          <div class="vehicle-card__img-wrap" aria-hidden="true">
+            <svg class="vehicle-icon" viewBox="0 0 120 60" fill="none">
+              <circle cx="28" cy="42" r="14" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="92" cy="42" r="14" fill="none" stroke="#FF4D00" stroke-width="2"/>
+              <circle cx="28" cy="42" r="5" fill="#FF4D00" opacity="0.6"/>
+              <circle cx="92" cy="42" r="5" fill="#FF4D00" opacity="0.6"/>
+              <path d="M42 42 L55 20 L75 20 L92 28" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M55 20 L60 10 L70 10" stroke="#FF4D00" stroke-width="2" stroke-linecap="round"/>
+              <rect x="60" y="8" width="18" height="8" rx="3" fill="#FF4D00" opacity="0.3" stroke="#FF4D00" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="vehicle-card__label">Moto</span>
+          <span class="vehicle-card__arrow" aria-hidden="true">→</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modal de configuración de vehículo -->
+  <div
+    class="modal-backdrop"
+    id="vehicle-modal-backdrop"
+    aria-hidden="true"
+    role="presentation"
+  ></div>
+
+  <dialog
+    class="vehicle-modal"
+    id="vehicle-modal"
+    aria-labelledby="vehicle-modal-title"
+    aria-modal="true"
+  >
+    <button class="modal-close" id="vehicle-modal-close" aria-label="Cerrar configuración de vehículo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="vehicle-modal__header">
+      <div class="vehicle-modal__icon" id="vehicle-modal-icon" aria-hidden="true"></div>
+      <div>
+        <p class="vehicle-modal__eyebrow">Configurar vehículo</p>
+        <h3 class="vehicle-modal__title" id="vehicle-modal-title">Mi <span id="vehicle-modal-type">Sedán</span></h3>
+      </div>
+    </div>
+    <form class="vehicle-modal__form" id="vehicle-config-form" novalidate>
+      <div class="form-row">
+        <label for="v-year">Año</label>
+        <select id="v-year" name="year" required>
+          <option value="">Selecciona el año</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="v-brand">Marca</label>
+        <select id="v-brand" name="brand" required>
+          <option value="">Selecciona la marca</option>
+          <option>Toyota</option>
+          <option>Nissan</option>
+          <option>Chevrolet</option>
+          <option>Ford</option>
+          <option>Honda</option>
+          <option>Volkswagen</option>
+          <option>Mazda</option>
+          <option>Kia</option>
+          <option>Hyundai</option>
+          <option>RAM</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="v-engine">Motor</label>
+        <select id="v-engine" name="engine" required>
+          <option value="">Selecciona el motor</option>
+          <option>1.6L 4 cil.</option>
+          <option>1.8L 4 cil.</option>
+          <option>2.0L 4 cil. Turbo</option>
+          <option>2.5L 4 cil.</option>
+          <option>3.0L V6</option>
+          <option>3.5L V6</option>
+          <option>5.0L V8</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full btn--garage" id="save-garage-btn">
+        <span class="btn-text">Guardar en Mi Garaje</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+        <span class="btn-check" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+      </button>
+    </form>
+    <p class="vehicle-modal__disclaimer">Puedes guardar hasta 3 vehículos en tu garaje virtual.</p>
+  </dialog>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. CUADRÍCULA DE CATEGORÍAS                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section class="categories-section" id="categorias" aria-labelledby="cat-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Explora por área</p>
+        <h2 class="section-title" id="cat-title">Categorías Destacadas</h2>
+        <p class="section-sub">Encuentra exactamente lo que tu auto necesita</p>
+      </div>
+
+      <div class="categories-grid">
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Sistema de Frenos">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--frenos">
+              <svg viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="30" stroke="#FF4D00" stroke-width="3" opacity="0.3"/>
+                <circle cx="40" cy="40" r="20" stroke="#FF4D00" stroke-width="2"/>
+                <circle cx="40" cy="40" r="8" fill="#FF4D00" opacity="0.6"/>
+                <rect x="36" y="10" width="8" height="20" rx="4" fill="#FF4D00" opacity="0.8"/>
+                <rect x="36" y="50" width="8" height="20" rx="4" fill="#FF4D00" opacity="0.8"/>
+                <rect x="10" y="36" width="20" height="8" rx="4" fill="#FF4D00" opacity="0.8"/>
+                <rect x="50" y="36" width="20" height="8" rx="4" fill="#FF4D00" opacity="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Sistema de Frenos</h3>
+            <p class="cat-card__count">1,240 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Refrigeración">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--refrigeracion">
+              <svg viewBox="0 0 80 80" fill="none">
+                <rect x="25" y="10" width="30" height="50" rx="8" stroke="#FF4D00" stroke-width="2" fill="#FF4D00" opacity="0.08"/>
+                <rect x="33" y="5" width="14" height="10" rx="3" fill="#FF4D00" opacity="0.5"/>
+                <line x1="40" y1="20" x2="40" y2="55" stroke="#FF4D00" stroke-width="2" opacity="0.5"/>
+                <line x1="32" y1="30" x2="48" y2="30" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <line x1="32" y1="38" x2="48" y2="38" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <line x1="32" y1="46" x2="48" y2="46" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <ellipse cx="40" cy="65" rx="8" ry="4" fill="#FF4D00" opacity="0.4"/>
+                <path d="M36 65 Q40 72 44 65" stroke="#FF4D00" stroke-width="1.5" fill="none" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Refrigeración</h3>
+            <p class="cat-card__count">876 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Motor & Afinación">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--motor">
+              <svg viewBox="0 0 80 80" fill="none">
+                <rect x="20" y="25" width="40" height="30" rx="6" stroke="#FF4D00" stroke-width="2" fill="#FF4D00" opacity="0.08"/>
+                <rect x="28" y="15" width="10" height="15" rx="3" fill="#FF4D00" opacity="0.6"/>
+                <rect x="42" y="15" width="10" height="15" rx="3" fill="#FF4D00" opacity="0.6"/>
+                <circle cx="32" cy="40" r="8" stroke="#FF4D00" stroke-width="2"/>
+                <circle cx="48" cy="40" r="8" stroke="#FF4D00" stroke-width="2"/>
+                <circle cx="32" cy="40" r="3" fill="#FF4D00"/>
+                <circle cx="48" cy="40" r="3" fill="#FF4D00"/>
+                <line x1="8" y1="38" x2="20" y2="38" stroke="#FF4D00" stroke-width="2" opacity="0.6"/>
+                <line x1="60" y1="38" x2="72" y2="38" stroke="#FF4D00" stroke-width="2" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Motor & Afinación</h3>
+            <p class="cat-card__count">2,150 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Suspensión">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--suspension">
+              <svg viewBox="0 0 80 80" fill="none">
+                <line x1="40" y1="10" x2="40" y2="70" stroke="#FF4D00" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+                <rect x="30" y="25" width="20" height="5" rx="2" fill="#FF4D00" opacity="0.7"/>
+                <rect x="30" y="35" width="20" height="5" rx="2" fill="#FF4D00" opacity="0.5"/>
+                <rect x="30" y="45" width="20" height="5" rx="2" fill="#FF4D00" opacity="0.3"/>
+                <circle cx="40" cy="15" r="5" stroke="#FF4D00" stroke-width="2"/>
+                <circle cx="40" cy="65" r="8" stroke="#FF4D00" stroke-width="2"/>
+                <circle cx="40" cy="65" r="4" fill="#FF4D00" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Suspensión</h3>
+            <p class="cat-card__count">934 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Eléctrico & Luces">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--electrico">
+              <svg viewBox="0 0 80 80" fill="none">
+                <polygon points="40,8 52,38 44,38 48,72 28,38 36,38" fill="#FF4D00" opacity="0.25" stroke="#FF4D00" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Eléctrico & Luces</h3>
+            <p class="cat-card__count">1,890 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cat-card" tabindex="0" aria-label="Categoría: Transmisión">
+          <div class="cat-card__img-wrap" aria-hidden="true">
+            <div class="cat-card__img cat-card__img--transmision">
+              <svg viewBox="0 0 80 80" fill="none">
+                <circle cx="20" cy="40" r="12" stroke="#FF4D00" stroke-width="2" fill="none"/>
+                <circle cx="60" cy="40" r="12" stroke="#FF4D00" stroke-width="2" fill="none"/>
+                <circle cx="20" cy="40" r="4" fill="#FF4D00"/>
+                <circle cx="60" cy="40" r="4" fill="#FF4D00"/>
+                <line x1="32" y1="40" x2="48" y2="40" stroke="#FF4D00" stroke-width="3" opacity="0.7"/>
+                <circle cx="40" cy="40" r="5" fill="#FF4D00" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">Transmisión</h3>
+            <p class="cat-card__count">612 productos</p>
+            <span class="cat-card__link">Ver todo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="cat-card__glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 5. HOT SALE – PRODUCTOS CON VISTA RÁPIDA                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section class="hot-sale-section" id="hot-sale" aria-labelledby="hs-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Ofertas limitadas</p>
+        <h2 class="section-title" id="hs-title">
+          <span class="hot-badge" aria-label="Hot Sale">🔥 Hot Sale</span>
+        </h2>
+        <p class="section-sub">Los productos más buscados al mejor precio</p>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+
+        <!-- Producto 1 -->
+        <article class="product-card scroll-reveal" data-product="0" aria-label="Producto: Balatas Brembo Sport">
+          <div class="product-card__badges">
+            <span class="badge badge--hot">HOT</span>
+            <span class="badge badge--compat">Universal</span>
+          </div>
+          <button class="product-card__quick-view" data-product="0" aria-label="Vista rápida: Balatas Brembo Sport">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <div class="product-card__img-wrap" aria-hidden="true">
+            <div class="product-card__img product-card__img--balatas">
+              <svg viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="38" stroke="#FF4D00" stroke-width="3" opacity="0.2"/>
+                <circle cx="50" cy="50" r="26" stroke="#FF4D00" stroke-width="2" opacity="0.4"/>
+                <circle cx="50" cy="50" r="10" fill="#FF4D00" opacity="0.6"/>
+                <rect x="44" y="12" width="12" height="22" rx="6" fill="#FF4D00" opacity="0.7"/>
+                <rect x="44" y="66" width="12" height="22" rx="6" fill="#FF4D00" opacity="0.7"/>
+                <rect x="12" y="44" width="22" height="12" rx="6" fill="#FF4D00" opacity="0.7"/>
+                <rect x="66" y="44" width="22" height="12" rx="6" fill="#FF4D00" opacity="0.7"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Brembo</p>
+            <h3 class="product-card__name">Balatas Sport High Performance</h3>
+            <p class="product-card__compat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Compatible con +320 modelos</p>
+            <div class="product-card__pricing">
+              <span class="product-card__price">$1,290</span>
+              <span class="product-card__old-price">$1,890</span>
+              <span class="product-card__discount">-32%</span>
+            </div>
+            <div class="product-card__stock"><span class="stock-dot stock-dot--ok"></span>En stock · 48 unidades</div>
+            <button class="btn btn--primary btn--full btn--sm">Agregar al Carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card scroll-reveal" data-product="1" aria-label="Producto: Filtro de Aire K&N">
+          <div class="product-card__badges">
+            <span class="badge badge--new">NUEVO</span>
+          </div>
+          <button class="product-card__quick-view" data-product="1" aria-label="Vista rápida: Filtro de Aire K&N">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <div class="product-card__img-wrap" aria-hidden="true">
+            <div class="product-card__img product-card__img--filtro">
+              <svg viewBox="0 0 100 100" fill="none">
+                <rect x="20" y="20" width="60" height="60" rx="30" stroke="#FF4D00" stroke-width="3" opacity="0.3"/>
+                <rect x="30" y="30" width="40" height="40" rx="20" stroke="#FF4D00" stroke-width="2" opacity="0.5"/>
+                <line x1="50" y1="20" x2="50" y2="80" stroke="#FF4D00" stroke-width="1.5" opacity="0.3"/>
+                <line x1="20" y1="50" x2="80" y2="50" stroke="#FF4D00" stroke-width="1.5" opacity="0.3"/>
+                <line x1="29" y1="29" x2="71" y2="71" stroke="#FF4D00" stroke-width="1.5" opacity="0.3"/>
+                <line x1="71" y1="29" x2="29" y2="71" stroke="#FF4D00" stroke-width="1.5" opacity="0.3"/>
+                <circle cx="50" cy="50" r="10" fill="#FF4D00" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">K&N Engineering</p>
+            <h3 class="product-card__name">Filtro de Aire de Alto Flujo</h3>
+            <p class="product-card__compat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Compatible con +180 modelos</p>
+            <div class="product-card__pricing">
+              <span class="product-card__price">$890</span>
+              <span class="product-card__old-price">$1,100</span>
+              <span class="product-card__discount">-19%</span>
+            </div>
+            <div class="product-card__stock"><span class="stock-dot stock-dot--ok"></span>En stock · 120 unidades</div>
+            <button class="btn btn--primary btn--full btn--sm">Agregar al Carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card scroll-reveal" data-product="2" aria-label="Producto: Amortiguadores Monroe">
+          <div class="product-card__badges">
+            <span class="badge badge--hot">HOT</span>
+            <span class="badge badge--sale">OFERTA</span>
+          </div>
+          <button class="product-card__quick-view" data-product="2" aria-label="Vista rápida: Amortiguadores Monroe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <div class="product-card__img-wrap" aria-hidden="true">
+            <div class="product-card__img product-card__img--amorti">
+              <svg viewBox="0 0 100 100" fill="none">
+                <rect x="44" y="10" width="12" height="80" rx="6" fill="#FF4D00" opacity="0.15" stroke="#FF4D00" stroke-width="2"/>
+                <rect x="38" y="35" width="24" height="8" rx="3" fill="#FF4D00" opacity="0.5"/>
+                <rect x="38" y="48" width="24" height="8" rx="3" fill="#FF4D00" opacity="0.4"/>
+                <rect x="38" y="61" width="24" height="8" rx="3" fill="#FF4D00" opacity="0.3"/>
+                <circle cx="50" cy="18" r="6" fill="#FF4D00" opacity="0.7"/>
+                <circle cx="50" cy="82" r="8" stroke="#FF4D00" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Monroe</p>
+            <h3 class="product-card__name">Amortiguadores Gas-Matic Delanteros</h3>
+            <p class="product-card__compat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Compatible con +95 modelos</p>
+            <div class="product-card__pricing">
+              <span class="product-card__price">$2,150</span>
+              <span class="product-card__old-price">$3,200</span>
+              <span class="product-card__discount">-33%</span>
+            </div>
+            <div class="product-card__stock"><span class="stock-dot stock-dot--low"></span>Stock bajo · 8 unidades</div>
+            <button class="btn btn--primary btn--full btn--sm">Agregar al Carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="product-card scroll-reveal" data-product="3" aria-label="Producto: Aceite Mobil 1">
+          <div class="product-card__badges">
+            <span class="badge badge--best">MÁS VENDIDO</span>
+          </div>
+          <button class="product-card__quick-view" data-product="3" aria-label="Vista rápida: Aceite Mobil 1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <div class="product-card__img-wrap" aria-hidden="true">
+            <div class="product-card__img product-card__img--aceite">
+              <svg viewBox="0 0 100 100" fill="none">
+                <rect x="32" y="15" width="36" height="70" rx="8" fill="#FF4D00" opacity="0.12" stroke="#FF4D00" stroke-width="2"/>
+                <rect x="38" y="8" width="24" height="12" rx="4" fill="#FF4D00" opacity="0.5"/>
+                <rect x="42" y="4" width="16" height="8" rx="3" fill="#FF4D00" opacity="0.7"/>
+                <line x1="40" y1="30" x2="60" y2="30" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <line x1="40" y1="40" x2="60" y2="40" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <line x1="40" y1="50" x2="60" y2="50" stroke="#FF4D00" stroke-width="1.5" opacity="0.4"/>
+                <path d="M38 65 Q50 58 62 65" stroke="#FF4D00" stroke-width="2" fill="none" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Mobil 1</p>
+            <h3 class="product-card__name">Aceite Sintético 5W-30 Advanced</h3>
+            <p class="product-card__compat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Recomendado por fabricantes</p>
+            <div class="product-card__pricing">
+              <span class="product-card__price">$480</span>
+              <span class="product-card__old-price">$620</span>
+              <span class="product-card__discount">-23%</span>
+            </div>
+            <div class="product-card__stock"><span class="stock-dot stock-dot--ok"></span>En stock · 280 unidades</div>
+            <button class="btn btn--primary btn--full btn--sm">Agregar al Carrito</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modal de Vista Rápida -->
+  <div class="modal-backdrop qv-backdrop" id="qv-backdrop" aria-hidden="true"></div>
+  <dialog class="quick-view-modal" id="quick-view-modal" aria-labelledby="qv-title" aria-modal="true">
+    <button class="modal-close" id="qv-close" aria-label="Cerrar vista rápida">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="qv-content" id="qv-content">
+      <!-- Inyectado por JS -->
+    </div>
+  </dialog>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="AutoParts MX inicio">
+            <span class="logo-icon">
+              <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <circle cx="18" cy="18" r="16" stroke="#FF4D00" stroke-width="2.5"/>
+                <path d="M10 22 L18 10 L26 22" stroke="#FF4D00" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="18" cy="22" r="3" fill="#FF4D00"/>
+              </svg>
+            </span>
+            <span class="logo-text">Auto<strong>Parts</strong><em>MX</em></span>
+          </a>
+          <p>Refacciones exactas para tu auto. Calidad garantizada, entrega rápida.</p>
+          <div class="footer-trust">
+            <span>🔒 Pago seguro</span>
+            <span>🚚 Envío mismo día</span>
+            <span>✅ Garantía 1 año</span>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Links del sitio">
+          <h4>Refaccionaria</h4>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Tiendas físicas</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Blog técnico</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Soporte">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Rastrear pedido</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Chat en vivo</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>📞 800-AUTO-MX1</p>
+          <p>✉ hola@autopartsmx.com</p>
+          <p>🕐 Lun–Sáb 8am–8pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AutoParts MX · Todos los derechos reservados</p>
+        <p>Hecho con ❤ en México</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
